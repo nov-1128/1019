@@ -26,5 +26,16 @@ namespace p2.Controllers
 
             return View();
         }
+        public ActionResult List()
+        {
+            string[] data = new string[] { "Noms：灵感来自Git的数据库",
+                "微软开源LightGBM：轻量级梯度Boosting框架",
+                "Cassandra和Mesos协调运作：Uber跨多个数据中心高速运行",
+                "携程风险防御体系的变革之路",
+            };
+            ViewBag.data = data;
+            ViewData["data"] = data;
+            return View();
+        }
     }
 }
