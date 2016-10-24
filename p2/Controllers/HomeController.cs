@@ -26,7 +26,7 @@ namespace p2.Controllers
 
             return View();
         }
-        public ActionResult List()
+        public ActionResult List(int page=11)
         {
             string[] data = new string[] { "Noms：灵感来自Git的数据库",
                 "微软开源LightGBM：轻量级梯度Boosting框架",
@@ -37,7 +37,7 @@ namespace p2.Controllers
             ViewData["data"] = data;
             ViewData.Model = data;
 
-           
+            ViewBag.Page = page;
             return View();
         }
         public ActionResult Hello()
