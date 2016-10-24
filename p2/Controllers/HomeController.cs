@@ -36,6 +36,8 @@ namespace p2.Controllers
             ViewBag.data = data;
             ViewData["data"] = data;
             ViewData.Model = data;
+
+           
             return View();
         }
         public ActionResult Hello()
@@ -50,5 +52,17 @@ namespace p2.Controllers
 
             return View();
         }
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        public ActionResult Save(string title,string content)
+        {
+            ViewBag.Title = title;
+            ViewBag.Content = content;
+            return View();
+        }
+
     }
 }

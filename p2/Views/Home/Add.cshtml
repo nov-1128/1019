@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>添加新闻</h2>
+<form action="/Home/Save" method="post">
+    <table class="table-bordered" width="800px">
+        <tr>
+            <td>标题:</td>
+            <td><input type="text" name="Title" value="" width="600px"/></td>
+        </tr>
+        <tr>
+            <td>内容:</td>
+            <td>
+                <textarea name="Content" cols="40" rows="4"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" class="btn btn-success">提交</button>
+                <button type="reset" class="btn btn-warning">取消</button>
+            </td>
+        </tr>
+    </table>
+</form>
