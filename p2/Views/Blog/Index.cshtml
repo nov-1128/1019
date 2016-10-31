@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var articles = ViewBag.BlogArticles as List<BlogArticle>;
+}
+
+<h2>博客</h2>
+<ol>
+    @foreach (var item in articles)
+    {
+        <li>
+            @Html.ActionLink("[  编辑  ]", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("[  删除  ]", "Delete", new { id = item.ID}) |
+            <a href="Blog/Show/@item.ID">@item.Subject</a>
+        </li>
+    }
+</ol>
