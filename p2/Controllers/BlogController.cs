@@ -35,8 +35,8 @@ namespace p2.Controllers
             var db = new BlogDB();
             db.BlogArticles.Add(article);
             db.SaveChanges();
-
-            return RedirectToAction("Index");
+            return Redirect("Index");
+           // return RedirectToAction("Index");
         }
 
         public ActionResult Show(int id)
