@@ -6,7 +6,7 @@
 
 <h2>博客</h2>
 <fieldset>
-    <form method="get" action="@Url.Action("Index")"><input type="text" name="q" value="@ViewBag.q" /><input type="submit" value="搜索" class="btn-group" /></form>
+    <form method="get" action="@Url.Action("Index")"><input type="text" name="q" value="@ViewBag.q"  class="alert-success"/><input type="submit" value="搜索" class="btn-success" /></form>
 </fieldset>
 <ol>
     @foreach (var item in articles)
