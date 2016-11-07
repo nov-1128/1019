@@ -29,11 +29,14 @@ namespace p2.Controllers
             return View();
         }
 
-        public ActionResult ArticleSave(string subject, string body)
+       // public ActionResult ArticleSave(string subject, string body)
+       public ActionResult ArticleSave(BlogArticle model)
         {
             var article = new BlogArticle();
-            article.Subject = subject;
-            article.Body = body;
+            // article.Subject = subject;
+            article.Subject = model.Subject;
+            // article.Body = body;
+            article.Body = model.Body;
             article.CreTime = DateTime.Now;
 
             var db = new BlogDB();
