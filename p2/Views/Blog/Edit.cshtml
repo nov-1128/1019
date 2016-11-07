@@ -4,7 +4,7 @@
 }
 
 <h2>编辑</h2>
-
+<!--
 <form action="/Blog/EditSave" method="post">
     <input type="hidden" value="@Model.ID" name="Id" />
     <table class="table table-bordered">
@@ -28,3 +28,31 @@
 
     </table>
 </form>
+-->
+
+@using (Html.BeginForm("ArticleSave", "Blog"))
+{
+    <input type = "hidden" value = "@Model.ID" name = "Id" />
+        <table class="table table-bordered">
+            <tr>
+                <td>标题：</td>
+                <td>
+                    @Html.TextBox("Subject");
+                </td>
+            </tr>
+            <tr>
+                <td>内容</td>
+                <td>
+                    @Html.TextArea("Body", new {style="width:600px;max-width:1000px;"})
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" class="btn btn-primary">保存</button>
+                    <button type="reset" class="btn btn-warning">取消</button>
+                </td>
+            </tr>
+
+        </table>
+}

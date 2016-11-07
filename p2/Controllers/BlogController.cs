@@ -31,7 +31,7 @@ namespace p2.Controllers
 
        // public ActionResult ArticleSave(string subject, string body)
        public ActionResult ArticleSave(BlogArticle model)
-        {
+        { /*
             var article = new BlogArticle();
             // article.Subject = subject;
             article.Subject = model.Subject;
@@ -41,7 +41,17 @@ namespace p2.Controllers
 
             var db = new BlogDB();
             db.BlogArticles.Add(article);
-            db.SaveChanges();
+            db.SaveChanges();*/
+            if (ModelState.IsValid) {
+                var article = new BlogArticle();              
+                article.Subject = model.Subject;              
+                article.Body = model.Body;
+                article.CreTime = DateTime.Now;
+
+                var db = new BlogDB();
+                db.BlogArticles.Add(article);
+                db.SaveChanges();
+            }
             return Redirect("Index");
            // return RedirectToAction("Index");
         }
