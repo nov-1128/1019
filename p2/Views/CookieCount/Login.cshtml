@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>登录</h2>
+<!--
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Login", "CookieCount"))
+        {
+            <input type="text" name="account" class="form-control" />
+            @Html.Password("password",null,new { @class = "form-control" })
+            <button>登录</button>
+        }
+    </div>
+</div>
+-->
+
+<form action="@Url.Action("PostLogin")" method="post">
+    <table class="table table-bordered">
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="username" value="" />  </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="text" name="password" value="" />  </td>
+        </tr>
+        <tr>  
+            <td></td>         
+            <td>
+                <button type="submit" class="btn btn-primary">登录</button>
+            </td>
+        </tr>
+
+    </table>
+</form>
