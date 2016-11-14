@@ -33,7 +33,7 @@ namespace p2.Controllers
             }
             else
             {
-                return RedirectToAction("login", "cookiedemo");
+                return RedirectToAction("Login", "CookieCount");
             }
         }
 
